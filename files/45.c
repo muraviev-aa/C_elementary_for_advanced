@@ -1,4 +1,4 @@
-// 45. Пердача массива в функцию №3
+// 45. Передача массива в функцию №3
 
 #include <stdio.h>
 #define SIZEARR(x) (sizeof(x) / sizeof(x[0]))
