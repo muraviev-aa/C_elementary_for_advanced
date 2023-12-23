@@ -11,16 +11,16 @@ int func(int a, int b, int c, double * root1, double * root2);
 int main()
 {
     int a, b, c; // коэффициенты
-    a = 1; b = -2; c = 1;
+    a = 9; b = -6; c = 1;
     double k1, k2; // корни уравнения
     int result;
     result = func(a, b, c, &k1, &k2);
-    if(result == 1)
+    if(result == 0)
         puts("No roots!");
+    else if(result == 1)
+        printf("Root1 = Root2 = %f", k2);
     else if(result == 2)
-        printf("Root1 = Root2 = %f", k1);
-    else if(result == 3)
-        printf("Root1 = %k1\nRoot2 = %f", k1, k2);
+        printf("Root1 = %f\nRoot2 = %f", k1, k2);
 
     return 0;
 }
@@ -29,20 +29,17 @@ int func(int a, int b, int c, double * root1, double * root2)
 {
     int discr;
     discr = pow(b, 2) - 4 * a * c;
-    if(discr < 0)
-        return 1;
-    else if(discr == 0)
+    if(discr == 0)
     {
-        *root1 = -b / (2*a);
+        *root1 = (double)-b / (2*a);
         *root2 = *root1;
-        return 2;
+        return 1;
     }
     else if(discr > 0)
     {
-        *root1 = (-b + sqrt(discr));
-        *root2 = (-b - sqrt(discr));
-        return 3;
+        *root1 = (-b + sqrt(discr)) / (2*a);
+        *root2 = (-b - sqrt(discr)) / (2*a);
+        return 2;
     }
-
     return 0;
 }
