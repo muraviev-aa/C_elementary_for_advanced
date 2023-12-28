@@ -79,5 +79,6 @@
 61. Узнаем текущие показания настройки локали с помощью ф-ии localeconv();
 62. Возвращаем более одного значения из функции;
 63. Использование ф-ии GetVolumeInformation();
+64. WIN API, ф-ия GetTickCount();
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
