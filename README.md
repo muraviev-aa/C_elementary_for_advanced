@@ -80,5 +80,6 @@
 62. Возвращаем более одного значения из функции;
 63. Использование ф-ии GetVolumeInformation();
 64. WIN API, ф-ия GetTickCount();
+65. Ф-ия WriteConsole() WIN32 API;
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
